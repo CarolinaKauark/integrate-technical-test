@@ -3,7 +3,6 @@ require('dotenv').config();
 
 const AWS_TOKEN = process.env.AWS_TOKEN;
 
-// return a array of all the budgets in teamwork
 const getAWSData = async () => {
 
   try {
@@ -14,7 +13,6 @@ const getAWSData = async () => {
       }
     })
 
-    console.log('get aws data', response.data);
     return response.data;
   } catch(error) {
     console.log('get aws data error', error.message);
