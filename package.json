@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",    
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js"
   },
   "dependencies": {
+    "@hubspot/api-client": "^10.0.0",
     "axios": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^6.0.0",
