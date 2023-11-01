@@ -12,7 +12,6 @@ const getAWSData = async () => {
           'Content-Type': 'application/json'
       }
     })
-
     return response.data;
   } catch(error) {
     console.log('get aws data error', error.message);
