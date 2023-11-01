@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // The route for handle the process
-app.get('/create-new-contacts', handleContacts);
+app.put('/create-new-contacts', handleContacts);
 
 app.use(errorMiddleware);
 
