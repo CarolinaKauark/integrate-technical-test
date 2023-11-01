@@ -1,4 +1,5 @@
 const { default: axios } = require('axios');
+const errorGenerate = require('./errorGenerate');
 require('dotenv').config();
 
 const API_KEY = process.env.API_KEY;
@@ -13,10 +14,10 @@ const updateOrCreateContacts = async (payload) => {
     })
     return response.data.results;
   } catch(error) {
-    console.log('updateOrCreateContacts error', error);
+    throw errorGenerate(error.status, error.message);
   }
 }
-
+// I was also testing those endpoints below before choosing the best strategy, I left here if you want check. 
 const getContacts = async () => {
   try {
     const response = await axios.get(`https://api.hubspot.com/crm/v3/objects/contacts`, {
